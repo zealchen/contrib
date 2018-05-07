@@ -24,8 +24,6 @@ COPY log4j.properties /opt/$KAFKA_DIST/config/
 RUN set -x \
     && ln -s /opt/$KAFKA_DIST $KAFKA_HOME \
     && useradd $KAFKA_USER \
-    && [ `id -u $KAFKA_USER` -eq 1001 ] \
-    && [ `id -g $KAFKA_USER` -eq 1001 ] \
     && mkdir -p $KAFKA_DATA_DIR \
     && chown -R "$KAFKA_USER:$KAFKA_USER"  /opt/$KAFKA_DIST \
     && chown -R "$KAFKA_USER:$KAFKA_USER"  $KAFKA_DATA_DIR
