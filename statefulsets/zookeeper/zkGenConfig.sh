@@ -113,18 +113,18 @@ function create_data_dirs() {
 
     if [ ! -d $ZK_DATA_DIR  ]; then
         mkdir -p $ZK_DATA_DIR
-        chown -R $ZK_USER:$ZK_USER $ZK_DATA_DIR
     fi
+    chown -R $ZK_USER:$ZK_USER $ZK_DATA_DIR
 
     if [ ! -d $ZK_DATA_LOG_DIR  ]; then
         mkdir -p $ZK_DATA_LOG_DIR
-        chown -R $ZK_USER:$ZK_USER $ZK_DATA_LOG_DIR
     fi
+    chown -R $ZK_USER:$ZK_USER $ZK_DATA_LOG_DIR
 
     if [ ! -d $ZK_LOG_DIR  ]; then
         mkdir -p $ZK_LOG_DIR
-        chown -R $ZK_USER:$ZK_USER $ZK_LOG_DIR
     fi
+    chown -R $ZK_USER:$ZK_USER $ZK_LOG_DIR
 
     if [ ! -f $ID_FILE ]; then
         echo $MY_ID >> $ID_FILE
